@@ -23,7 +23,7 @@ int main(){
     cout << "How many payments is your loan for? " << endl;
     cin >> numberOfPayments;
 
-    // calculate monthly interest rate for monthly payment calculation
+    // Calculations for output
     double monthlyRate = (yearlyRate / 100) / 12.0;
     double monthlyPayment = (monthlyRate * pow(1 + monthlyRate, numberOfPayments)) / (pow(1+ monthlyRate, numberOfPayments) - 1) * loanAmount;
     double amountPaid = ((monthlyPayment * monthlyRate) * numberOfPayments) * 100;
@@ -32,7 +32,7 @@ int main(){
     // Set Currency Values to 2 decimals
     cout << setprecision(2) << right << fixed;
 
-    // Calculations and output
+    // Adjusted output from calculations
     cout << "Loan Amount: " << setw(15) << "$ " << loanAmount << endl;
     cout << "Monthly Interest Rate : " << setw(11) << static_cast<int>(monthlyRate * 100) << "%" << endl;
     cout << "Number of Payments: " << setw(16) << static_cast<int>(numberOfPayments) << endl;

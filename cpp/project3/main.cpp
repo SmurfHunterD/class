@@ -13,6 +13,7 @@ using namespace std;
 int main(){
 
     // Initialize Variables
+    const int monthsInYear = 12;
     double numberOfPayments, loanAmount, yearlyRate; 
 
     // Collect User Input for Calculations
@@ -24,7 +25,7 @@ int main(){
     cin >> numberOfPayments;
 
     // Calculations for output
-    double monthlyRate = (yearlyRate / 100) / 12.0;
+    double monthlyRate = (yearlyRate / 100) / monthsInYear;
     double monthlyPayment = (monthlyRate * pow(1 + monthlyRate, numberOfPayments)) / (pow(1+ monthlyRate, numberOfPayments) - 1) * loanAmount;
     double amountPaid = ((monthlyPayment * monthlyRate) * numberOfPayments) * 100;
     double interestPaid = amountPaid - loanAmount;

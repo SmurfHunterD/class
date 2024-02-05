@@ -2,7 +2,6 @@
  * 1/27/2024
  * Home Practice 3 
  */
-
 #include <iostream>
 #include <iomanip>
 #include <cmath>

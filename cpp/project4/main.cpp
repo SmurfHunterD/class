@@ -7,7 +7,7 @@ using namespace std;
 char zodiacSign;
 int birthMonth, birthDay;
 
-// setting all horoscopes to a constant that can be changed daily
+// setting all horoscopes to a constant that can be adjusted daily
 const string Capricorn = "Capricorn: With the new moon in Aquarius electrifying your security-conscious second house today,you’re on a quest to\n"
                 "boost your bottom line. The next two weeks are peak manifesting time, so be on the lookout for opportunities…then seize them\n"
                 "when you spot them! Let people know exactly what you’re after: freelance gigs, a new 9 to 5, a smart investment. You’re poised\n"
@@ -139,7 +139,6 @@ int main(){
     else if ((birthMonth == 11 && birthDay >= 25 && birthDay <= 30) || (birthMonth == 12 && birthDay <= 18 && birthDay > 0)){
         zodiacSign = 'L';
     }
-
     // Logic to handle date ranges for Cusps //
     // Sagittarius/Capricorn
     else if (birthMonth == 12 && birthDay >= 19 && birthDay <= 24){
@@ -232,7 +231,6 @@ int main(){
         case 'L':
             cout << Sagittarius;
             break;
-
         // Output for dates that fall within 2 days of the previous or next sign
         case 'M':
             cout << "You are on a cusp! " << "\n" << Sagittarius << "\n" << Capricorn;

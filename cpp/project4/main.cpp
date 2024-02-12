@@ -95,123 +95,100 @@ int main(){
     if ((birthMonth == 12 && birthDay >= 25 && birthDay <= 31) || (birthMonth == 1 && birthDay <= 18 && birthDay > 0)){
         zodiacSign = 'A';
     }
-
     // Aquarius
     else if ((birthMonth == 1 && birthDay >= 24 && birthDay <= 31) || (birthMonth == 2 && birthDay <= 15 && birthDay > 0)){
         zodiacSign = 'B';
     }
-
     // Pisces
     else if ((birthMonth == 2 && birthDay >= 22 && birthDay <= 29) || (birthMonth == 3 && birthDay <= 17 && birthDay > 0)){
         zodiacSign = 'C';
     }
-
     // Aries
     else if ((birthMonth == 3 && birthDay >= 24 && birthDay <= 31) || (birthMonth == 4 && birthDay <= 16 && birthDay > 0)){
         zodiacSign = 'D';
     }
-
     // Taurus
     else if ((birthMonth == 4 && birthDay >= 23 && birthDay <= 30) || (birthMonth == 5 && birthDay <= 17 && birthDay > 0)){
         zodiacSign = 'E';
     }
-
     // Gemini
     else if ((birthMonth == 5 && birthDay >= 24 && birthDay <= 31) || (birthMonth == 6 && birthDay <= 17 && birthDay > 0)){
         zodiacSign = 'F';
     }
-
     // Cancer
     else if ((birthMonth == 6 && birthDay >= 24 && birthDay <= 30) || (birthMonth == 7 && birthDay <= 19 && birthDay > 0)){
         zodiacSign = 'G';
     }
-
     // Leo
     else if ((birthMonth == 7 && birthDay >= 26 && birthDay <= 31) || (birthMonth == 8 && birthDay <= 19 && birthDay > 0)){
         zodiacSign = 'H';
     }
-
     // Virgo
     else if ((birthMonth == 8 && birthDay >= 26 && birthDay <= 31) || (birthMonth == 9 && birthDay <= 19 && birthDay > 0)){
         zodiacSign = 'I';
     }
-
     // Libra
     else if ((birthMonth == 9 && birthDay >= 26 && birthDay <= 30) || (birthMonth == 10 && birthDay <= 19 && birthDay > 0)){
         zodiacSign = 'J';
     }
-
     // Scorpio
     else if ((birthMonth == 10 && birthDay >= 26 && birthDay <= 31) || (birthMonth == 11 && birthDay <= 18 && birthDay > 0)){
         zodiacSign = 'K';
     }
-
     // Sagittarius
     else if ((birthMonth == 11 && birthDay >= 25 && birthDay <= 30) || (birthMonth == 12 && birthDay <= 18 && birthDay > 0)){
         zodiacSign = 'L';
     }
-    
+
     // Logic to handle date ranges for Cusps //
     // Sagittarius/Capricorn
     else if (birthMonth == 12 && birthDay >= 19 && birthDay <= 24){
         zodiacSign = 'M';
     }
-
     // Capricorn/Aquarius
     else if (birthMonth == 1 && birthDay >= 17 && birthDay <= 22){
         zodiacSign = 'N';
     }
-
     // Aquarius/Pisces
     else if (birthMonth == 2 && birthDay >= 16 && birthDay <= 21){
         zodiacSign = 'O';
     }
-
     // Pisces/Aries
     else if (birthMonth == 3 && birthDay >= 18 && birthDay <= 23){
         zodiacSign = 'P';
     }
-
     // Aries/Taurus
     else if (birthMonth == 4 && birthDay >= 17 && birthDay <= 22){
         zodiacSign = 'Q';
     }
-
     // Taurus/Gemini
     else if (birthMonth == 5 && birthDay >= 18 && birthDay <= 23){
         zodiacSign = 'R';
     }
-
     // Gemini/Cancer
     else if (birthMonth == 6 && birthDay >= 18 && birthDay <= 23){
         zodiacSign = 'S';
     }
-
     // Cancer/Leo
     else if (birthMonth == 7 && birthDay >= 20 && birthDay <= 25){
         zodiacSign = 'T';
     }
-
     // Leo/Virgo
     else if (birthMonth == 8 && birthDay >= 20 && birthDay <= 25){
         zodiacSign = 'U';
     }
-
     // Virgo/Libra
     else if (birthMonth == 9 && birthDay >= 20 && birthDay <= 25){
         zodiacSign = 'V';
     }
-
     // Libra/Scorpio
     else if (birthMonth == 10 && birthDay >= 20 && birthDay <= 25){
         zodiacSign = 'W';
     }
-
     // Scorpio/Sagittarius
     else if (birthMonth == 11 && birthDay >= 19 && birthDay <= 24){
         zodiacSign = 'X';
     }
-
     // Logic to handle all inputs outside of the days per month criteria handled above
  else {
         cout << "Please make sure you are entering a number (1-12 for month and 1-31 for day)" << endl;
@@ -293,8 +270,6 @@ int main(){
         case 'X':
             cout << "You are on a cusp! " << "\n" << Scorpio << "\n" << Sagittarius;
             break;
-            
     }
-
     return 0;
 }

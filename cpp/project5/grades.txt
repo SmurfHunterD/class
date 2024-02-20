@@ -1,9 +1,1 @@
-Bunny Easter
-9 9 8 9 10 10 10 9 9 9 
-Average Score: 9.20
-airy Tooth
-10 10 10 10 10 10 10 10 10 9 
-Average Score: 9.90
-laus Santa
-10 0 9 10 9 10 10 10 10 10 
-Average Score: 8.80
+Bunny Easter 9 9 8 9 10 10 10 9 9 9 9.20

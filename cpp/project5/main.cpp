@@ -8,33 +8,34 @@ int main() {
     ifstream inputFile("scores.txt");
     ofstream outputFile("grades.txt");
 
+    // Initialize variables
     string firstName, lastName;
-    int score, totalScore, totalExams;
+    double totalScore;
+    int totalExams, score;
+    double averageScore = 0.0;
 
     while (inputFile >> firstName >> lastName) {
-        outputFile << firstName << " " << lastName << endl;
+        outputFile << firstName << " " << lastName;
 
         totalScore = 0;
-        totalExams = 0;
+        totalExams = 0;  
 
+        // Read scores for current student
         while (inputFile >> score) {
-            outputFile << score << " ";
+            outputFile << " " << score;
             totalScore += score;
             totalExams++;
         }
-
-        double averageScore = 0.0;
-        averageScore = static_cast<double>(totalScore) / totalExams;
-
-        outputFile << endl << "Average Score: " << fixed << setprecision(2) << averageScore << endl;
-
-        // Clear error flags
-        inputFile.clear();
-
-        // Read and clear newline character
-        inputFile.get();
+        
+        // Calculate average score for the current student
+        averageScore = totalScore / totalExams;
+        
+        // Write average score to file 
+        outputFile << " " << fixed << setprecision(2) << averageScore << endl;
     }
 
     inputFile.close();
     outputFile.close();
+    return 0;
 }
+

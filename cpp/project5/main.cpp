@@ -5,41 +5,36 @@
 using namespace std;
 
 int main() {
-
     ifstream inputFile("scores.txt");
     ofstream outputFile("grades.txt");
 
-    string name;
-    int score;
-    if (inputFile)
-        while (inputFile >> name) {
-            outputFile << "Name: " << name << endl;
+    string firstName, lastName;
+    int score, totalScore, totalExams;
 
-            int sumOfScores = 0;
-            int totalExams = 0;
+    while (inputFile >> firstName >> lastName) {
+        outputFile << firstName << " " << lastName << endl;
 
-            while (inputFile >> score) {
-                outputFile << "Score: " << score << endl;
-                sumOfScores += score;
-                totalExams ++;
-            }
-            
+        totalScore = 0;
+        totalExams = 0;
+
+        while (inputFile >> score) {
+            outputFile << score << " ";
+            totalScore += score;
+            totalExams++;
+        }
+
         double averageScore = 0.0;
-        if (totalExams > 0) {
-            averageScore = static_cast<double>(sumOfScores) / totalExams;
-        }
+        averageScore = static_cast<double>(totalScore) / totalExams;
 
-        outputFile << "Average exam score: " << fixed << setprecision(2) << averageScore << endl;
+        outputFile << endl << "Average Score: " << fixed << setprecision(2) << averageScore << endl;
 
+        // Clear error flags
+        inputFile.clear();
+
+        // Read and clear newline character
         inputFile.get();
+    }
 
-        outputFile << endl;
-
-        }
-    
-        inputFile.close();
-        outputFile.close();
-            
-    return 0;
+    inputFile.close();
+    outputFile.close();
 }
-

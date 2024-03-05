@@ -1,3 +1,8 @@
+/* Angelo Edward
+ * CIS170
+ * Project5
+ */
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -21,7 +26,7 @@ int main() {
         totalExams = 0;  
 
         // Read scores for current student
-        while (inputFile >> score) {
+        while (totalExams < 10 && inputFile >> score) {
             outputFile << " " << score;
             totalScore += score;
             totalExams++;
